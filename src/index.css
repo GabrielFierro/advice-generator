@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: system-ui;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+@font-face {
+  font-family: 'Manrope ExtraBold';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Manrope Font'),
+    url('../public/fonts/manrope/Manrope-ExtraBold.ttf') format('ttf');
+}
