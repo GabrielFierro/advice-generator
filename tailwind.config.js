@@ -3,7 +3,7 @@ export default {
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     fontFamily: {
-      'manrope-extrabold': ['Manrope Extrabold']
+      'manrope-extrabold': ['Manrope ExtraBold', 'sans-serif']
     },
     colors: {
       primaryLightCyan: 'hsl(193, 38%, 86%)',
