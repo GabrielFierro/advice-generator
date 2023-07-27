@@ -40,7 +40,7 @@ export default function Card() {
               Advice #{id}
             </span>
           </header>
-          <h1 className='text-primaryLightCyan text-3xl py-8'>
+          <h1 className='text-primaryLightCyan text-3xl py-8 md:px-3'>
             &quot;{advice}&quot;
           </h1>
           <footer className='flex flex-col items-center justify-center'>
