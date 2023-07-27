@@ -5,7 +5,7 @@ const RANDOM_ADVICE = 'https://api.adviceslip.com/advice';
 
 export default function Card() {
   const [advice, setAdvice] = useState(
-    'Click on the dice to get a random advice'
+    'Click on the die to get a random advice'
   );
   const [id, setId] = useState(0);
   const [roll, setRoll] = useState(false);
