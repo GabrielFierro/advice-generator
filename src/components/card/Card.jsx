@@ -36,7 +36,7 @@ export default function Card() {
       <article className='bg-neutralDarkGrayish w-full md:w-5/12 h-auto p-8 rounded-xl'>
         <div className='flex flex-col items-center font-manrope-extrabold font-extrabold text-center'>
           <header className=' tracking-widest'>
-            <span className='text-primaryNeonGreen uppercase tracking-widest text-md'>
+            <span className='text-primaryNeonGreen uppercase tracking-[.35em] text-md'>
               Advice #{id}
             </span>
           </header>
@@ -45,16 +45,21 @@ export default function Card() {
           </h1>
           <footer className='flex flex-col items-center justify-center'>
             <div className='pb-6'>
-              <img src={PatternDivider} alt='Pattern divider' />
+              <img
+                src={PatternDivider}
+                width='444px'
+                height='16px'
+                alt='Pattern divider'
+              />
             </div>
-            <div className='w-16 h-16 rounded-full bg-primaryNeonGreen flex items-center justify-center -mb-16'>
+            <div className='w-16 h-16 rounded-full bg-primaryNeonGreen flex items-center justify-center -mb-16 cursor-pointer hover:shadow-[0_0px_40px_0px_rgb(77,255,166)]'>
               <div className='w-auto h-auto'>
                 <svg
                   onClick={handleClick}
                   className={
                     roll
-                      ? 'bg-primaryNeonGreen w-full h-full cursor-pointer rotate-180 duration-200 ease-out'
-                      : 'bg-primaryNeonGreen w-full h-full cursor-pointer'
+                      ? 'bg-primaryNeonGreen w-full h-full rotate-180 duration-200 ease-out'
+                      : 'bg-primaryNeonGreen w-full h-full'
                   }
                   width='24'
                   height='24'
