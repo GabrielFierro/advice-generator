@@ -4,8 +4,10 @@ import PatternDivider from '../../../images/pattern-divider-mobile.svg';
 const RANDOM_ADVICE = 'https://api.adviceslip.com/advice';
 
 export default function Card() {
-  const [advice, setAdvice] = useState();
-  const [id, setId] = useState();
+  const [advice, setAdvice] = useState(
+    'Click on the dice to get a random advice'
+  );
+  const [id, setId] = useState(0);
   const [roll, setRoll] = useState(false);
 
   function handleClick() {
@@ -18,15 +20,15 @@ export default function Card() {
   }
 
   useEffect(() => {
-    fetch(RANDOM_ADVICE)
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        const { ...advice } = data.slip;
-        setId(advice.id);
-        setAdvice(advice.advice);
-      });
+    if (roll) {
+      fetch(RANDOM_ADVICE)
+        .then((res) => res.json())
+        .then((data) => {
+          const { ...adviceData } = data.slip;
+          setId(adviceData.id);
+          setAdvice(adviceData.advice);
+        });
+    }
   }, [roll]);
 
   return (
