@@ -33,7 +33,7 @@ export default function Card() {
 
   return (
     <section className=' flex flex-col items-center w-full h-full p-8 justify-center'>
-      <article className='bg-neutralDarkGrayish w-full h-auto p-8 rounded-xl'>
+      <article className='bg-neutralDarkGrayish w-full md:w-5/12 h-auto p-8 rounded-xl'>
         <div className='flex flex-col items-center font-manrope-extrabold font-extrabold text-center'>
           <header className=' tracking-widest'>
             <span className='text-primaryNeonGreen uppercase tracking-widest text-md'>
