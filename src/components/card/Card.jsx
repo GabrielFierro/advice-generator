@@ -44,7 +44,7 @@ export default function Card() {
             &quot;{advice}&quot;
           </h1>
           <footer className='flex flex-col items-center justify-center'>
-            <div className='pb-6'>
+            <div className='pb-9'>
               <img
                 src={PatternDivider}
                 width='444px'
