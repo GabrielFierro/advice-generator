@@ -6,6 +6,16 @@ const RANDOM_ADVICE = 'https://api.adviceslip.com/advice';
 export default function Card() {
   const [advice, setAdvice] = useState();
   const [id, setId] = useState();
+  const [roll, setRoll] = useState(false);
+
+  function handleClick() {
+    setRoll(true);
+
+    setTimeout(() => {
+      // Set rolling to false again when time over
+      setRoll(false);
+    }, 1000);
+  }
 
   useEffect(() => {
     fetch(RANDOM_ADVICE)
@@ -17,7 +27,7 @@ export default function Card() {
         setId(advice.id);
         setAdvice(advice.advice);
       });
-  }, []);
+  }, [roll]);
 
   return (
     <section className=' flex flex-col items-center w-full h-full p-8 justify-center'>
@@ -38,7 +48,12 @@ export default function Card() {
             <div className='w-16 h-16 rounded-full bg-primaryNeonGreen flex items-center justify-center -mb-16'>
               <div className='w-auto h-auto'>
                 <svg
-                  className='bg-primaryNeonGreen w-full h-full cursor-pointer'
+                  onClick={handleClick}
+                  className={
+                    roll
+                      ? 'bg-primaryNeonGreen w-full h-full cursor-pointer rotate-180 duration-200 ease-out'
+                      : 'bg-primaryNeonGreen w-full h-full cursor-pointer'
+                  }
                   width='24'
                   height='24'
                   xmlns='http://www.w3.org/2000/svg'
